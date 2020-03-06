@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FOSS Monster</title>
+    <link>https://drsensor.github.io/foss-monster/id/</link>
+    <description>Recent content on FOSS Monster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sensorfied@gmail.com (Mr. Wild)</managingEditor>
+    <webMaster>sensorfied@gmail.com (Mr. Wild)</webMaster>
+    
+	<atom:link href="https://drsensor.github.io/foss-monster/id/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on FOSS Monster</title>
+    <link>https://drsensor.github.io/foss-monster/post/</link>
+    <description>Recent content in Posts on FOSS Monster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sensorfied@gmail.com (Mr. Wild)</managingEditor>
+    <webMaster>sensorfied@gmail.com (Mr. Wild)</webMaster>
+    <lastBuildDate>Sun, 01 Mar 2020 17:11:28 +0700</lastBuildDate>
+    
+	<atom:link href="https://drsensor.github.io/foss-monster/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Good Api Design for Publishing a crate</title>
+      <link>https://drsensor.github.io/foss-monster/post/good-api-design-for-publishing-rust-crate/</link>
+      <pubDate>Sun, 01 Mar 2020 17:11:28 +0700</pubDate>
+      <author>sensorfied@gmail.com (Mr. Wild)</author>
+      <guid>https://drsensor.github.io/foss-monster/post/good-api-design-for-publishing-rust-crate/</guid>
+      <description>A good DX will influences a good UX   We live in API Economic and each API can give birth to another API. Your basic API design influences how well developers are able to consume it and even how they use it. Just like website design or product design, API design informs the user experience. There even a way to measure API usability but we will skip that. This post is about my analysis on practical API design in Rust.</description>
+    </item>
+    
+    <item>
+      <title>Rust Builder Pattern</title>
+      <link>https://drsensor.github.io/foss-monster/post/rust-builder-pattern/</link>
+      <pubDate>Sun, 01 Mar 2020 15:07:56 +0700</pubDate>
+      <author>sensorfied@gmail.com (Mr. Wild)</author>
+      <guid>https://drsensor.github.io/foss-monster/post/rust-builder-pattern/</guid>
+      <description>&lt;div id=&#34;preamble&#34;&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Builder pattern is a design pattern to separate construction of complex instance from it&amp;#8217;s representation. One of it&amp;#8217;s purpose is to make it easier to changes the data structure without deprecating the consumer facing API.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;I find several builder pattern in Rust and some of them is implementated as you found in many GoF concepts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph lead&#34;&gt;
+&lt;p&gt;However, Rust is not an OOP language!&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

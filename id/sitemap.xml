@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/id/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://drsensor.github.io/foss-monster/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://drsensor.github.io/foss-monster/id/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/id/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://drsensor.github.io/foss-monster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://drsensor.github.io/foss-monster/id/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/id/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://drsensor.github.io/foss-monster/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://drsensor.github.io/foss-monster/id/tags/"
+                />
+  </url>
+  
+</urlset>

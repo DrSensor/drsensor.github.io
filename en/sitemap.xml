@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/tags/api/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/categories/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://drsensor.github.io/foss-monster/id/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://drsensor.github.io/foss-monster/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://drsensor.github.io/foss-monster/id/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://drsensor.github.io/foss-monster/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/post/good-api-design-for-publishing-rust-crate/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/post/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/tags/rust/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/tags/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://drsensor.github.io/foss-monster/id/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://drsensor.github.io/foss-monster/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/categories/tips-tricks/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/categories/tutorials/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/tags/design-pattern/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/foss-monster/post/rust-builder-pattern/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+</urlset>

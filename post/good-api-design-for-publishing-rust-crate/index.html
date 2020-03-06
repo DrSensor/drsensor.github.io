@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Good Api Design for Publishing a crate - FOSS Monster</title>
+  <meta name="description" content="A good DX will influences a good UX   We live in API Economic and each API can give birth to another API. Your basic API design influences how well developers are able to consume it and even how they use it. Just like website design or product design, API design informs the user experience. There even a way to measure API usability but we will skip that. This post is about my analysis on practical API design in Rust.">
+  <meta name="author" content="Mr. Wild"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "FOSS Monster",
+    
+    "url": "https:\/\/drsensor.github.io\/foss-monster"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/drsensor.github.io\/foss-monster"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/drsensor.github.io\/foss-monster",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/drsensor.github.io\/foss-monster\/post\/good-api-design-for-publishing-rust-crate\/",
+          "name": "Good api design for publishing a crate"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Mr. Wild"
+  },
+  "headline": "Good Api Design for Publishing a crate",
+  "description" : "A good DX will influences a good UX   We live in API Economic and each API can give birth to another API. Your basic API design influences how well developers are able to consume it and even how they use it. Just like website design or product design, API design informs the user experience. There even a way to measure API usability but we will skip that. This post is about my analysis on practical API design in Rust.",
+  "inLanguage" : "en",
+  "wordCount":  280 ,
+  "datePublished" : "2020-03-01T17:11:28",
+  "dateModified" : "2020-03-01T17:11:28",
+  "image" : "https:\/\/drsensor.github.io\/foss-monster\/img\/avatar-icon.png",
+  "keywords" : [ "rust, api" ],
+  "mainEntityOfPage" : "https:\/\/drsensor.github.io\/foss-monster\/post\/good-api-design-for-publishing-rust-crate\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/drsensor.github.io\/foss-monster",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/drsensor.github.io\/foss-monster\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Good Api Design for Publishing a crate" />
+<meta property="og:description" content="A good DX will influences a good UX   We live in API Economic and each API can give birth to another API. Your basic API design influences how well developers are able to consume it and even how they use it. Just like website design or product design, API design informs the user experience. There even a way to measure API usability but we will skip that. This post is about my analysis on practical API design in Rust.">
+<meta property="og:image" content="https://drsensor.github.io/foss-monster/img/avatar-icon.png" />
+<meta property="og:url" content="https://drsensor.github.io/foss-monster/post/good-api-design-for-publishing-rust-crate/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="FOSS Monster" />
+
+  <meta name="twitter:title" content="Good Api Design for Publishing a crate" />
+  <meta name="twitter:description" content="A good DX will influences a good UX   We live in API Economic and each API can give birth to another API. Your basic API design influences how well developers are able to consume it and even how they …">
+  <meta name="twitter:image" content="https://drsensor.github.io/foss-monster/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@dr_sensor" />
+  <meta name="twitter:creator" content="@dr_sensor" />
+  <link href='https://drsensor.github.io/foss-monster/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.65.3" />
+  <link rel="alternate" href="https://drsensor.github.io/foss-monster/index.xml" type="application/rss+xml" title="FOSS Monster"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://drsensor.github.io/foss-monster/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://drsensor.github.io/foss-monster/css/highlight.min.css" /><link rel="stylesheet" href="https://drsensor.github.io/foss-monster/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://drsensor.github.io/foss-monster">FOSS Monster</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="About" href="/foss-monster/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Categories" href="/foss-monster/categories">Categories</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/foss-monster/tags">Tags</a>
+            </li>
+          
+        
+
+        
+          
+            <li>
+              
+                
+              
+                
+                  <a href="/id" lang="id">id</a>
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="FOSS Monster" href="https://drsensor.github.io/foss-monster">
+            <img class="avatar-img" src="https://drsensor.github.io/foss-monster/img/avatar-icon.png" alt="FOSS Monster" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Good Api Design for Publishing a crate</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on 1 March 2020
+  
+    &nbsp;(Last modified on 2 March 2020)
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;280&nbsp;words
+  
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+A good DX will influences a good UX
+</blockquote>
+</div>
+<div class="paragraph">
+<p>We live in <a href="https://hub.packtpub.com/what-api-economy/">API Economic</a> and each API can give birth to another API.
+Your basic API design influences how well developers are able to consume it and even how they use it. Just like website design or product design, API design informs the user experience.
+There even a way to measure <a href="https://100daysdx.com/82">API usability</a> but we will skip that. This post is about my analysis on practical API design in Rust.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rust_common_api_design">Rust common API design</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rust has <a href="https://rust-lang.github.io/api-guidelines/checklist.html">API Guidelines Checklist</a> and some of them are integrated in <a href="https://rust-lang.github.io/rust-clippy/stable">clippy</a>.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Following just the API Design Guide can result to "valid APIs", but might have serious usability issues.
+</blockquote>
+<div class="attribution">
+&#8212; 100daysdx.com
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enforcing_policy">Enforcing policy</h3>
+<div class="sect3">
+<h4 id="_via_borrow_checker">via borrow checker</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_via_type_specificity">via type specificity</h4>
+<div class="sect4">
+<h5 id="_enumstruct_vs_enumvariantstruct"><code>Enum::Struct{}</code> vs <code>Enum::Variant(Struct)</code></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_concrete_type_vs_opaque_type_vs_trait_object">concrete type vs opaque type vs trait object</h5>
+
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ergonomicness_via_std_trait">Ergonomicness via <code>std</code> Trait</h3>
+<div class="sect3">
+<h4 id="_type_with_value_type_with_purpose">type with value == type with purpose</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Default</code></p>
+</li>
+<li>
+<p><code>Debug</code> - all <strong>public</strong> concrete types (especially <code>enum</code>) must implement <code>Debug</code> trait</p>
+</li>
+<li>
+<p><code>Display</code></p>
+</li>
+<li>
+<p><code>Error</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">❕</div>
+</td>
+<td class="content">
+<div class="title">Support both <em>Opaque</em> and <em>Concrete</em> type!</div>
+<hr>
+<div class="paragraph">
+<p>This usefull, especially when dealing with <code>Display</code> trait.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">device.print()</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">device.print_from_string()</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-rust" data-lang="rust">device.print_from_html()?</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_transformation">type transformation</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>From</code> and <code>Into</code></p>
+</li>
+<li>
+<p><code>TryFrom</code> and <code>TryInto</code></p>
+</li>
+<li>
+<p><code>ToString</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_iterators_and_range">iterators and <code>Range</code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_operator_overloading">operator overloading</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_design_pattern">Design pattern</h3>
+<div class="paragraph">
+<p>Sometimes library written in Rust might have unusual design pattern <strong>and it&#8217;s fine</strong>.<br>
+Just want to say that 😋</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Rust is unique on it&#8217;s own!<br>
+Yes I know, it&#8217;s a cheap conlusion but what else I can say 😄</p>
+</div>
+<hr>
+<div class="quoteblock">
+<blockquote>
+What about macros?
+</blockquote>
+<div class="attribution">
+&#8212; answer
+</div>
+</div>
+<div class="paragraph">
+<p>Macro in Rust is different beast. Unlike type and generic, it can&#8217;t auto-generate the accepted argument and it&#8217;s type. This means you need an extra effort for documenting those macros. The most practical format for documenting macros is by using examples.</p>
+</div>
+</div>
+</div>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://drsensor.github.io/foss-monster/tags/rust/">rust</a>&nbsp;
+            
+              <a href="https://drsensor.github.io/foss-monster/tags/api/">api</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fdrsensor.github.io%2ffoss-monster%2fpost%2fgood-api-design-for-publishing-rust-crate%2f&amp;text=Good%20Api%20Design%20for%20Publishing%20a%20crate&amp;via=dr_sensor" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdrsensor.github.io%2ffoss-monster%2fpost%2fgood-api-design-for-publishing-rust-crate%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fdrsensor.github.io%2ffoss-monster%2fpost%2fgood-api-design-for-publishing-rust-crate%2f&amp;title=Good%20Api%20Design%20for%20Publishing%20a%20crate" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fdrsensor.github.io%2ffoss-monster%2fpost%2fgood-api-design-for-publishing-rust-crate%2f&amp;title=Good%20Api%20Design%20for%20Publishing%20a%20crate" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fdrsensor.github.io%2ffoss-monster%2fpost%2fgood-api-design-for-publishing-rust-crate%2f&amp;title=Good%20Api%20Design%20for%20Publishing%20a%20crate" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fdrsensor.github.io%2ffoss-monster%2fpost%2fgood-api-design-for-publishing-rust-crate%2f&amp;description=Good%20Api%20Design%20for%20Publishing%20a%20crate" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/foss-monster/post/rust-builder-pattern/">Rust Builder Pattern</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://drsensor.github.io/foss-monster/post/rust-builder-pattern/" data-toggle="tooltip" data-placement="top" title="Rust Builder Pattern">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:sensorfied@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/DrSensor" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/dr_sensor" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Mr. Wild
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://drsensor.github.io/foss-monster">FOSS Monster</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.65.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          &nbsp;&bull;&nbsp;[<a href="true79c38f8985798674aa3a6d9454e112f7366d15a1">79c38f89</a>]
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://drsensor.github.io/foss-monster/js/main.js"></script>
+<script src="https://drsensor.github.io/foss-monster/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://drsensor.github.io/foss-monster/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
