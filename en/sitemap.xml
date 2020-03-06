@@ -3,13 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://drsensor.github.io/tags/api/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://drsensor.github.io/categories/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
@@ -24,7 +18,6 @@
   
   <url>
     <loc>https://drsensor.github.io/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
@@ -38,23 +31,7 @@
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/post/good-api-design-for-publishing-rust-crate/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/post/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/tags/rust/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://drsensor.github.io/tags/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
@@ -65,26 +42,6 @@
                 hreflang="en"
                 href="https://drsensor.github.io/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/categories/tips-tricks/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/categories/tutorials/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/tags/design-pattern/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/post/rust-builder-pattern/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
   </url>
   
 </urlset>

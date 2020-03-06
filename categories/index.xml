@@ -7,28 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>sensorfied@gmail.com (Mr. Wild)</managingEditor>
     <webMaster>sensorfied@gmail.com (Mr. Wild)</webMaster>
-    <lastBuildDate>Sun, 01 Mar 2020 17:11:28 +0700</lastBuildDate>
     
 	<atom:link href="https://drsensor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>tips &amp; tricks</title>
-      <link>https://drsensor.github.io/categories/tips-tricks/</link>
-      <pubDate>Sun, 01 Mar 2020 17:11:28 +0700</pubDate>
-      <author>sensorfied@gmail.com (Mr. Wild)</author>
-      <guid>https://drsensor.github.io/categories/tips-tricks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tutorials</title>
-      <link>https://drsensor.github.io/categories/tutorials/</link>
-      <pubDate>Sun, 01 Mar 2020 17:11:28 +0700</pubDate>
-      <author>sensorfied@gmail.com (Mr. Wild)</author>
-      <guid>https://drsensor.github.io/categories/tutorials/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
