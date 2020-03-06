@@ -3,87 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/tags/api/</loc>
+    <loc>https://drsensor.github.io/tags/api/</loc>
     <lastmod>2020-03-02T01:31:32+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/categories/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://drsensor.github.io/foss-monster/id/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://drsensor.github.io/foss-monster/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/foss-monster/</loc>
+    <loc>https://drsensor.github.io/categories/</loc>
     <lastmod>2020-03-02T01:31:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/foss-monster/id/"
+                href="https://drsensor.github.io/id/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/foss-monster/"
+                href="https://drsensor.github.io/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/post/good-api-design-for-publishing-rust-crate/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/foss-monster/post/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/foss-monster/tags/rust/</loc>
-    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://drsensor.github.io/foss-monster/tags/</loc>
+    <loc>https://drsensor.github.io/</loc>
     <lastmod>2020-03-02T01:31:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/foss-monster/id/tags/"
+                href="https://drsensor.github.io/id/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/foss-monster/tags/"
+                href="https://drsensor.github.io/"
                 />
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/categories/tips-tricks/</loc>
+    <loc>https://drsensor.github.io/post/good-api-design-for-publishing-rust-crate/</loc>
     <lastmod>2020-03-02T01:31:32+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/categories/tutorials/</loc>
+    <loc>https://drsensor.github.io/post/</loc>
     <lastmod>2020-03-02T01:31:32+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/tags/design-pattern/</loc>
+    <loc>https://drsensor.github.io/tags/rust/</loc>
     <lastmod>2020-03-02T01:31:32+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/post/rust-builder-pattern/</loc>
+    <loc>https://drsensor.github.io/tags/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://drsensor.github.io/id/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://drsensor.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/categories/tips-tricks/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/categories/tutorials/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/tags/design-pattern/</loc>
+    <lastmod>2020-03-02T01:31:32+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://drsensor.github.io/post/rust-builder-pattern/</loc>
     <lastmod>2020-03-02T01:31:32+07:00</lastmod>
   </url>
   

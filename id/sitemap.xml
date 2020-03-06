@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/id/categories/</loc>
+    <loc>https://drsensor.github.io/id/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/foss-monster/categories/"
+                href="https://drsensor.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/foss-monster/id/categories/"
+                href="https://drsensor.github.io/id/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/id/</loc>
+    <loc>https://drsensor.github.io/id/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/foss-monster/"
+                href="https://drsensor.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/foss-monster/id/"
+                href="https://drsensor.github.io/id/"
                 />
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/foss-monster/id/tags/</loc>
+    <loc>https://drsensor.github.io/id/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/foss-monster/tags/"
+                href="https://drsensor.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/foss-monster/id/tags/"
+                href="https://drsensor.github.io/id/tags/"
                 />
   </url>
   

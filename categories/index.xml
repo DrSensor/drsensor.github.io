@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on FOSS Monster</title>
-    <link>https://drsensor.github.io/foss-monster/categories/</link>
+    <link>https://drsensor.github.io/categories/</link>
     <description>Recent content in Categories on FOSS Monster</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>sensorfied@gmail.com (Mr. Wild)</managingEditor>
     <webMaster>sensorfied@gmail.com (Mr. Wild)</webMaster>
     <lastBuildDate>Sun, 01 Mar 2020 17:11:28 +0700</lastBuildDate>
     
-	<atom:link href="https://drsensor.github.io/foss-monster/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drsensor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>tips &amp; tricks</title>
-      <link>https://drsensor.github.io/foss-monster/categories/tips-tricks/</link>
+      <link>https://drsensor.github.io/categories/tips-tricks/</link>
       <pubDate>Sun, 01 Mar 2020 17:11:28 +0700</pubDate>
       <author>sensorfied@gmail.com (Mr. Wild)</author>
-      <guid>https://drsensor.github.io/foss-monster/categories/tips-tricks/</guid>
+      <guid>https://drsensor.github.io/categories/tips-tricks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tutorials</title>
-      <link>https://drsensor.github.io/foss-monster/categories/tutorials/</link>
+      <link>https://drsensor.github.io/categories/tutorials/</link>
       <pubDate>Sun, 01 Mar 2020 17:11:28 +0700</pubDate>
       <author>sensorfied@gmail.com (Mr. Wild)</author>
-      <guid>https://drsensor.github.io/foss-monster/categories/tutorials/</guid>
+      <guid>https://drsensor.github.io/categories/tutorials/</guid>
       <description></description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>design pattern on FOSS Monster</title>
-    <link>https://drsensor.github.io/foss-monster/tags/design-pattern/</link>
+    <link>https://drsensor.github.io/tags/design-pattern/</link>
     <description>Recent content in design pattern on FOSS Monster</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>sensorfied@gmail.com (Mr. Wild)</managingEditor>
     <webMaster>sensorfied@gmail.com (Mr. Wild)</webMaster>
     <lastBuildDate>Sun, 01 Mar 2020 15:07:56 +0700</lastBuildDate>
     
-	<atom:link href="https://drsensor.github.io/foss-monster/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://drsensor.github.io/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Rust Builder Pattern</title>
-      <link>https://drsensor.github.io/foss-monster/post/rust-builder-pattern/</link>
+      <link>https://drsensor.github.io/post/rust-builder-pattern/</link>
       <pubDate>Sun, 01 Mar 2020 15:07:56 +0700</pubDate>
       <author>sensorfied@gmail.com (Mr. Wild)</author>
-      <guid>https://drsensor.github.io/foss-monster/post/rust-builder-pattern/</guid>
+      <guid>https://drsensor.github.io/post/rust-builder-pattern/</guid>
       <description>&lt;div id=&#34;preamble&#34;&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
