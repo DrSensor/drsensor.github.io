@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on FOSS Monster</title>
-    <link>https://drsensor.github.io/categories/</link>
+    <link>https://foss.monster/categories/</link>
     <description>Recent content in Categories on FOSS Monster</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>sensorfied@gmail.com (Mr. Wild)</managingEditor>
     <webMaster>sensorfied@gmail.com (Mr. Wild)</webMaster>
     
-	<atom:link href="https://drsensor.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://foss.monster/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://drsensor.github.io/id/categories/</loc>
+    <loc>https://foss.monster/id/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/categories/"
+                href="https://foss.monster/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/id/categories/"
+                href="https://foss.monster/id/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/id/</loc>
+    <loc>https://foss.monster/id/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/"
+                href="https://foss.monster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/id/"
+                href="https://foss.monster/id/"
                 />
   </url>
   
   <url>
-    <loc>https://drsensor.github.io/id/tags/</loc>
+    <loc>https://foss.monster/id/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://drsensor.github.io/tags/"
+                href="https://foss.monster/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://drsensor.github.io/id/tags/"
+                href="https://foss.monster/id/tags/"
                 />
   </url>
   
